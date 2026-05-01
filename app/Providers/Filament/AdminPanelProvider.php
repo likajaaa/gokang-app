@@ -12,12 +12,12 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\View\PanelsRenderHook;
-use Illuminate\Support\HtmlString;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\HtmlString;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class AdminPanelProvider extends PanelProvider
@@ -84,12 +84,12 @@ class AdminPanelProvider extends PanelProvider
                 PanelsRenderHook::BODY_START,
                 fn (): HtmlString => request()->is('admin/login')
                     ? new HtmlString('<style>
-                        /* Force background merah & transparent containers */
+                        /* Force background navy & transparent containers */
                         body,
                         .dark body,
                         .fi-simple-layout,
                         .dark .fi-simple-layout {
-                            background-color: #C8181A !important;
+                            background-color: #0F172A !important;
                         }
                         .fi-simple-main,
                         .dark .fi-simple-main,
@@ -102,64 +102,64 @@ class AdminPanelProvider extends PanelProvider
                         /* Hide Filament default brand/heading di simple page (kita pakai logo sendiri) */
                         .fi-simple-header { display: none !important; }
 
-                        /* Form labels hitam supaya keliatan di card putih */
+                        /* Form labels putih supaya keliatan di card orange */
                         .fi-fo-field-label,
                         .fi-fo-field-label *,
                         .fi-fo-field-label-content,
                         .dark .fi-fo-field-label,
                         .dark .fi-fo-field-label *,
                         .dark .fi-fo-field-label-content {
-                            color: #000000 !important;
+                            color: #FFFFFF !important;
                             font-weight: 600 !important;
                         }
 
-                        /* Input field: background putih, border merah GoKang, text gelap */
+                        /* Input field: semi-transparent white di atas card orange */
                         .fi-input-wrp,
                         .dark .fi-input-wrp {
-                            background: #FFFFFF !important;
-                            border-color: #E8272A !important;
-                            box-shadow: 0 0 0 1px #E8272A !important;
+                            background: rgba(255,255,255,0.15) !important;
+                            border: 1.5px solid rgba(255,255,255,0.3) !important;
+                            box-shadow: none !important;
                         }
                         .fi-input-wrp:focus-within,
                         .dark .fi-input-wrp:focus-within {
-                            border-color: #E8272A !important;
-                            box-shadow: 0 0 0 3px rgba(232,39,42,0.18) !important;
+                            border-color: rgba(255,255,255,0.6) !important;
+                            box-shadow: 0 0 0 3px rgba(255,255,255,0.18) !important;
                         }
                         .fi-input,
                         .dark .fi-input {
-                            color: #111827 !important;
+                            color: #FFFFFF !important;
                             background: transparent !important;
                         }
                         .fi-input::placeholder,
                         .dark .fi-input::placeholder {
-                            color: #9CA3AF !important;
+                            color: rgba(255,255,255,0.5) !important;
                         }
 
-                        /* Checkbox "Remember me" — border + accent merah GoKang */
+                        /* Checkbox "Remember me" — accent navy */
                         .fi-checkbox-input,
                         .dark .fi-checkbox-input {
-                            accent-color: #E8272A !important;
-                            border-color: #E8272A !important;
-                            box-shadow: 0 0 0 1px #E8272A !important;
+                            accent-color: #0F172A !important;
+                            border-color: rgba(255,255,255,0.6) !important;
+                            box-shadow: none !important;
                         }
                         .fi-checkbox-input:focus,
                         .fi-checkbox-input:focus-visible,
                         .dark .fi-checkbox-input:focus,
                         .dark .fi-checkbox-input:focus-visible {
-                            box-shadow: 0 0 0 3px rgba(232,39,42,0.18) !important;
+                            box-shadow: 0 0 0 3px rgba(255,255,255,0.25) !important;
                             outline: none !important;
                         }
 
                         /* Hint / helper text */
                         .fi-fo-field-wrp-hint,
                         .dark .fi-fo-field-wrp-hint {
-                            color: #6B7280 !important;
+                            color: rgba(255,255,255,0.7) !important;
                         }
 
                         /* Validation error message */
                         .fi-fo-field-wrp-error-message,
                         .dark .fi-fo-field-wrp-error-message {
-                            color: #DC2626 !important;
+                            color: #FEE2E2 !important;
                         }
                     </style>')
                     : new HtmlString(''),

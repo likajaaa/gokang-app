@@ -21,7 +21,7 @@
             <div style="
                 width: 72px;
                 height: 72px;
-                background: #C8181A;
+                background: #0F172A;
                 border-radius: 14px;
                 display: flex;
                 align-items: center;
@@ -54,7 +54,7 @@
 
     {{-- Login Card --}}
     <div style="
-        background: white;
+        background: #F97316;
         border-radius: 24px;
         padding: 32px;
         box-shadow: 0 20px 60px rgba(0,0,0,0.2);
@@ -64,13 +64,13 @@
         <h1 style="
             font-size: 22px;
             font-weight: 700;
-            color: #111827;
+            color: white;
             margin-bottom: 4px;
         ">Selamat Datang 👋</h1>
 
         <p style="
             font-size: 14px;
-            color: #9CA3AF;
+            color: rgba(255,255,255,0.8);
             margin-bottom: 28px;
         ">Masuk ke dashboard admin GoKang</p>
 
@@ -84,7 +84,7 @@
                 style="
                     width: 100%;
                     margin-top: 24px;
-                    background: #E8272A;
+                    background: #0F172A;
                     border-radius: 28px;
                 "
             >
@@ -96,7 +96,7 @@
         <p style="
             text-align: center;
             font-size: 12px;
-            color: #D1D5DB;
+            color: rgba(255,255,255,0.4);
             margin-top: 20px;
         ">
             © {{ date('Y') }} GoKang. All rights reserved.

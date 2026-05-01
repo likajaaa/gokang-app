@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan *)",
+      "Bash(curl -s -H \"Accept: application/json\" http://127.0.0.1:8000/api/v1/services)",
+      "Bash(\"/c/Program Files/nodejs/node.exe\" node_modules/expo/bin/cli export --output-dir \"c:/tmp/expo-splash-reset\" --platform android --no-minify)",
+      "Bash(npx tsc *)",
+      "Bash(git config *)",
+      "Bash(rm -rf mobile/.git)",
+      "Bash(git rm *)",
+      "Bash(git add *)"
+    ]
+  }
+}
